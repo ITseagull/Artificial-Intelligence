@@ -1,1 +1,15 @@
+Perceptron
+Implementation of single perceptron algorithm. File 'TrainingSet' contains training
+data and 'TestData' - test data.
+Learning algorithm:
+0. set all weights and threshold to small random numbers
+1. for each case in training data:
+-calculate output of perceptron
+-update weights and threshold according to perceptron learning rule
+2. repeat step 1 until specified number of iterations is completed.
+3. calculate accuracy on the test set.
 
+User has possibility to provide:
+- learning parameter
+- number of iterations
+- and testing new examples
