@@ -71,17 +71,15 @@ def decode(element,perc):
     else:
         return 0
 
-
-def run_test(dataSet): #method run, dataSet - input fileDataset[0]
+#method run, dataSet - input fileDataset[0]
+def run_test(dataSet): 
     positive = 0
     for element in dataSet:
         resul_act_func = p.activation_function(element.valueElement)
         if ((str(element.targetElement)) == (str(p.targetPerceptron)) and int(decode(element, p)) == int(
                 resul_act_func)):
-            #print('Result - ok.')
             positive += 1
         if (str(element.targetElement)) != (str(p.targetPerceptron)) and int(resul_act_func) == 0:
-            #print('Result - ok.')
             positive += 1
 
     print('Positive results in test list:', positive)
@@ -89,8 +87,8 @@ def run_test(dataSet): #method run, dataSet - input fileDataset[0]
     print("Accuracy for test list: ", accuracy)
 
 
-
-def run_training(dataSet, epoch): #method run, dataSet - input fileDataset[0]
+#method run, dataSet - input fileDataset[0]
+def run_training(dataSet, epoch): 
     i = 1
 
     while epoch > 0:
@@ -125,7 +123,7 @@ testList = [getValues(x) for x in fileTest]
 
 p = Perceptron('Iris-virginica',4)
 
-run_training(traintList, 2) #training
+run_training(traintList, 2) 
 run_test(testList)
 
 print('---------------------------')
@@ -134,10 +132,3 @@ testEl = [float(i) for i in test_element.split(',')]
 #test_element = [7.6,3.0,6.6,2.1]
 print('-----------------------------')
 print( p.targetPerceptron, p.activation_function(testEl))
-
-
-
-
-
-
-
