@@ -1,1 +1,14 @@
+K-nearest-neighbours
+Implementation of k-nearest-meighbours algoruthm. File "TrainingSet" cases from
+training set. File "TestData" contains cases from test set. Algorithm uses the data from training set to
+classify each case from the test set.
+Euclidean distance metric was used. K number is provided by user.
+For each example from test set printed: label of a class predicted by the algorithm and class label provided
+in test set. Computation of accuracy. 
+
+Example:
+Predicted Test
+Iris-setosa Iris-setosa
+Iris-setosa Iris-setosa
+Iris-setosa Iris-versicolor
 
